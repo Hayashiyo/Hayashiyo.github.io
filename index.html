@@ -29,7 +29,42 @@
             align-items: center;
         }
 
+#moon{
+    animation: moon 10s;
+    animation-fill-mode: forwards;
+    /* animation-iteration-count: infinite; */
+}
+#mt{
+    animation: mt 10s;
+    animation-fill-mode: forwards;
+    /* animation-iteration-count: infinite; */
+}
+#sand{
+    animation: sand 10s;
+    animation-fill-mode: forwards;
+    /* animation-iteration-count: infinite; */
+}
 
+    @keyframes moon {
+  from { margin-top: -2500px; }
+  /* 60% {
+    margin-top: -2000px;
+  } */
+  to   { margin-top: -1400px; }
+}
+@keyframes mt {
+  from { margin-top: -1900px; }
+  /* 80% {
+    margin-top: -3195px;
+  } */
+  to   { margin-top: -3595px; }
+}    @keyframes sand {
+  from { margin-top: -2400px; }
+  /* 80% {
+    margin-top: -3300px;
+  } */
+  to   { margin-top: -3700px; }
+}
 
         /* img {} */
     </style>
@@ -269,6 +304,24 @@
     </div>
     <br><br><br>
     <hr>
+<div class="container">
+    <div class="row">
+        <div class="col-12 justify-contant-center">
+            <img src="images/starSky.png" width="1500" height="2250" alt="" >
+            <img src="images/moon.png" width="1500" height="2250" alt="" style="margin-top: -2500px;" id="moon">
+            <!-- -1700 -->
+            <!-- -1600 -->
+            <!-- End Save for Web Slices -->
+            <img src="images/mountain2.png" width="1500" height="2250" alt="" style="margin-top: -1900px;" id="mt">
+            <!-- -2695 -->
+            <!-- -2895 -->
+            
+            <img src="images/sand.png" width="1500" height="2250" alt="" style="margin-top: -2400px;" id="sand">
+            <!-- -2700 -->
+            <!-- -2900 -->
+        </div>
+    </div>
+</div>
 
 
 
