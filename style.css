@@ -1,0 +1,57 @@
+
+body {
+    background-color: black;
+    color: white;
+}
+
+header {
+    height: 100%;
+    overflow: auto;
+    position: relative;
+    /* background-color: black; */
+}
+
+.center {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+#moon{
+animation: moon 30s;
+animation-fill-mode: forwards;
+/* animation-iteration-count: infinite; */
+}
+#mt{
+animation: mt 30s;
+animation-fill-mode: forwards;
+/* animation-iteration-count: infinite; */
+}
+#sand{
+animation: sand 30s;
+animation-fill-mode: forwards;
+/* animation-iteration-count: infinite; */
+}
+
+@keyframes moon {
+from { margin-top: -2500px; }
+/* 60% {
+margin-top: -2000px;
+} */
+to   { margin-top: -1400px; }
+}
+@keyframes mt {
+from { margin-top: -1900px; }
+/* 80% {
+margin-top: -3195px;
+} */
+to   { margin-top: -3595px; }
+}    @keyframes sand {
+from { margin-top: -2400px; }
+/* 80% {
+margin-top: -3300px;
+} */
+to   { margin-top: -3700px; }
+}
+
+/* img {} */
