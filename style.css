@@ -18,40 +18,40 @@ header {
 }
 
 #moon{
-animation: moon 30s;
+animation: moon 12s;
 animation-fill-mode: forwards;
 /* animation-iteration-count: infinite; */
 }
 #mt{
-animation: mt 30s;
+animation: mt 12s;
 animation-fill-mode: forwards;
 /* animation-iteration-count: infinite; */
 }
 #sand{
-animation: sand 30s;
+animation: sand 12s;
 animation-fill-mode: forwards;
 /* animation-iteration-count: infinite; */
 }
 
 @keyframes moon {
-from { margin-top: -2500px; }
+from { margin-top: -1200px; }
 /* 60% {
 margin-top: -2000px;
 } */
-to   { margin-top: -1400px; }
+to   { margin-top: -600px; }
 }
 @keyframes mt {
-from { margin-top: -1900px; }
+from { margin-top: -900px; }
 /* 80% {
 margin-top: -3195px;
 } */
-to   { margin-top: -3595px; }
+to   { margin-top: -1500px; }
 }    @keyframes sand {
-from { margin-top: -2400px; }
+from { margin-top: -1100px; }
 /* 80% {
 margin-top: -3300px;
 } */
-to   { margin-top: -3700px; }
+to   { margin-top: -1700px; }
 }
 
 /* img {} */
