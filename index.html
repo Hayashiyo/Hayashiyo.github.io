@@ -28,13 +28,13 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#news">News</a>
                     </li>
-                    <li class="nav-item dropdown">
+                    <li class="nav-item dropdown" >
                         <a class="nav-link dropdown-toggle" href="#" role="button"
                             data-bs-toggle="dropdown">Projects</a>
-                        <ul class="dropdown-menu dropdown-menu-dark">
-                            <li><a class="dropdown-item" href="#section3">PS AI</a></li>
-                            <li><a class="dropdown-item" href="#section2">PhP-Calendar</a></li>
-                            <li><a class="dropdown-item" href="#section4">Open API</a></li>
+                        <ul class="dropdown-menu dropdown-menu-dark" data-bs-auto-close="true">
+                            <li><a class="dropdown-item" href="#section3" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">PS AI</a></li>
+                            <li><a class="dropdown-item" href="#section2" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">PhP-Calendar</a></li>
+                            <li><a class="dropdown-item" href="#section4" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">Open API</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">
@@ -148,11 +148,6 @@
 
     <div id="section1" class="container-fluid bg-secondary" style="padding:100px 20px; text-align: center;">
         <h1>Front-end Project</h1>
-        <p>
-        <h4>C-class license act I </h4>
-        </p>
-        <p><img src="./pictures/C.png" alt="" style="max-width: 60%;
-            height: auto;"></p>
     </div>
 
     <div id="section2" class="container-fluid bg-dark text-white" style="padding:100px 20px; text-align: center;">
@@ -214,14 +209,14 @@
                     allowfullscreen></iframe>
             </div>
             <div class="col-12 col-sm-6 text-center">
-                <h2>泰山職業訓練場</h2>
+                <h2>輔大</h2>
                 <br>
                 <br>
-                <p>243新北市泰山區貴子里致遠新村55之1號
+                <p>
                     <br>
-                    <br> TEL:0229018274
+                    <br> TEL:
                     <br>
-                    <br> https://tkyhkm.wda.gov.tw/cp.aspx?n=C1AB93E4838E85E3
+                    <br> 
                 </p>
                 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
                     data-bs-whatever="@Oliver">Contact Me</button>
@@ -272,7 +267,7 @@
             </div>
             <div class="col-12 col-sm-6 text-center">
                 <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.7035065347873!2d121.41732691537885!3d25.04413414403832!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a7bec9ad74b1%3A0xa639904a89f26435!2z5Yue5YuV6YOo5Yue5YuV5Yqb55m85bGV572y5YyX5Z-65a6c6Iqx6YeR6aas5YiG572y5rOw5bGx6IG35qWt6KiT57e05aC0!5e0!3m2!1szh-TW!2stw!4v1667809137062!5m2!1szh-TW!2stw"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12912.199480362073!2d121.42617502532556!3d25.03167567977405!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a7dd8be91eaf%3A0xe342a67d6574f896!2z5aSp5Li75pWZ6LyU5LuB5aSn5a24!5e0!3m2!1szh-TW!2stw!4v1740203475757!5m2!1szh-TW!2stw"
                     width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
                     referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
@@ -296,12 +291,34 @@
 </div> -->
 
 
-
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var dropdownToggles = document.querySelectorAll(".nav-item.dropdown");
+    
+        dropdownToggles.forEach(function (dropdown) {
+            dropdown.addEventListener("click", function (event) {
+                var dropdownMenu = dropdown.querySelector(".dropdown-menu");
+                if (dropdownMenu.classList.contains("show")) {
+                    bootstrap.Dropdown.getInstance(dropdown.querySelector(".dropdown-toggle")).hide();
+                } else {
+                    bootstrap.Dropdown.getOrCreateInstance(dropdown.querySelector(".dropdown-toggle")).show();
+                }
+                event.stopPropagation();
+            });
+        });
+    
+        document.addEventListener("click", function (event) {
+            dropdownToggles.forEach(function (dropdown) {
+                if (!dropdown.contains(event.target)) {
+                    bootstrap.Dropdown.getInstance(dropdown.querySelector(".dropdown-toggle"))?.hide();
+                }
+            });
+        });
+    });
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.2/jquery.min.js"
         integrity="sha512-tWHlutFnuG0C6nQRlpvrEhE4QpkG1nn2MOUMWmUeRePl4e3Aki0VB6W1v3oLjFtd0hVOtRQ9PHpSfN6u6/QXkQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
