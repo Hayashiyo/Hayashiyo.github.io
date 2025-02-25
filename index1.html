@@ -2,102 +2,66 @@
 <html lang="en">
 
 <head>
-  <title>Oliver's Project</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <!-- 引入 Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-
-  <!-- 你的其他 CSS、Font Awesome 等... -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
-    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="style.css">
+    <title>Oliver's Project</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
 
 </head>
 
 <body>
-  <nav class="navbar fixed-top navbar-expand-lg bg-dark navbar-dark">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#demo">Oliver's Project</a>
 
-      <!-- 這裡是漢堡按鈕 -->
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#collapsibleNavbar"
-        aria-controls="collapsibleNavbar"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
 
-      <!-- 導覽列收合區塊 -->
-      <div class="collapse navbar-collapse" id="collapsibleNavbar">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <!-- 點擊後收合導覽列 -->
-            <a class="nav-link"
-               href="#news"
-              
-            >
-              News
-            </a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle"
-               href="#"
-               role="button"
-               data-bs-toggle="dropdown"
-            >
-              Projects
-            </a>
-            <ul class="dropdown-menu dropdown-menu-dark">
-              <li>
-                <a class="dropdown-item"
-                   href="#section3"
-                   
-                   
-                >
-                  PS AI
-                </a>
-              </li>
-              <li>
-                <a class="dropdown-item"
-                   href="#section2"
-                   
-                   
-                >
-                  PhP-Calendar
-                </a>
-              </li>
-              <li>
-                <a class="dropdown-item"
-                   href="#section4"
-                   
-                   
-                >
-                  Open API
-                </a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#profile">Profile</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#contect">Contact</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+    <nav class="navbar fixed-top navbar-expand-lg bg-dark navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#demo" >Oliver's Project</a>
+            <!--<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>-->
+            <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapsibleNavbar">
+  <span class="navbar-toggler-icon"></span>
+</button>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#news" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">News</a>
+                    </li>
+                    <li class="nav-item dropdown" >
+                        <a class="nav-link dropdown-toggle" href="#" role="button"
+                            data-bs-toggle="dropdown">Projects</a>
+                        <ul class="dropdown-menu dropdown-menu-dark" data-bs-auto-close="true">
+                            <li><a class="dropdown-item" href="#section3" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">PS AI</a></li>
+                            <li><a class="dropdown-item" href="#section2" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">PhP-Calendar</a></li>
+                            <li><a class="dropdown-item" href="#section4" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">Open API</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#profile">Profile</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contect">Contact</a>
+                    </li>
+                </ul>
+            </div>
 
-  <!-- 你的頁面內容（Carousel、Section 等） -->
-  <br>
+        </div>
+    </nav>
+
+            <!-- <form class="form-inline flex-box">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+              </form> -->
+
+    <br>
     <!-- Carousel -->
     <div id="demo" class="carousel slide" data-bs-ride="carousel">
 
@@ -238,9 +202,9 @@
     <br id="profile">
     <hr>
     <div style=" display: flex; justify-content: center; align-items: center;">
-        <div style="width: 100%; height: 400px;">
+        <div style="width: 50%;">
             <canvas id="myChart"></canvas>
-          </div>
+        </div>
 
     </div>
     <br>
@@ -307,8 +271,7 @@
                 <p>Piano piece by Debussy,
                     <br>
                     <br>third movement of his Suite bergamasque, L. 75 (1905),
-                    <br>
-                    <br>inspired by the Verlaine poem
+                    
                 </p>
             </div>
             <div class="col-12 col-sm-6 text-center">
@@ -320,83 +283,148 @@
         </div>
     </div>
     <br><br><br>
-  <!-- 其他內容略... -->
+    <!-- <hr> -->
+    <!-- <div class="container">
+    <div class="row">
+        <div class="col-12 justify-contant-center">
+            <img src="images/starSky.png" width="100%"alt="" >
+            <img src="images/moon.png" width="100%"alt="" style="margin-top: -1200px;" id="moon">
+          
+            <img src="images/mountain2.png" width="100%"alt="" style="margin-top: -900px;" id="mt">
+          
+            
+            <img src="images/sand.png" width="100%"alt="" style="margin-top: -1100px;" id="sand">
+            
+        </div>
+    </div>
+</div> -->
 
-  <!-- 引入 Bootstrap JS (含 Popper) -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
-  <!-- 你的其他 JS（例如 jQuery 等） -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.2/jquery.min.js"></script>
-  <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var dropdownToggles = document.querySelectorAll(".nav-item.dropdown");
+    
+        dropdownToggles.forEach(function (dropdown) {
+            dropdown.addEventListener("click", function (event) {
+                var dropdownMenu = dropdown.querySelector(".dropdown-menu");
+                if (dropdownMenu.classList.contains("show")) {
+                    bootstrap.Dropdown.getInstance(dropdown.querySelector(".dropdown-toggle")).hide();
+                } else {
+                    bootstrap.Dropdown.getOrCreateInstance(dropdown.querySelector(".dropdown-toggle")).show();
+                }
+                event.stopPropagation();
+            });
+        });
+    
+        document.addEventListener("click", function (event) {
+            dropdownToggles.forEach(function (dropdown) {
+                if (!dropdown.contains(event.target)) {
+                    bootstrap.Dropdown.getInstance(dropdown.querySelector(".dropdown-toggle"))?.hide();
+                }
+            });
+        });
+    });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-  <!-- 如果有需要自訂行為，可在這裡撰寫額外腳本 -->
-  <script>
-    $(function () {
-        const warning = $('#Warning')
-        warning.click(function () {
-            console.log('OK');
-            warning.fadeToggle();
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.2/jquery.min.js"
+        integrity="sha512-tWHlutFnuG0C6nQRlpvrEhE4QpkG1nn2MOUMWmUeRePl4e3Aki0VB6W1v3oLjFtd0hVOtRQ9PHpSfN6u6/QXkQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"
+        integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+<!--
+    <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                var navbarToggler = document.querySelector(".navbar-toggler");
+                var navbarCollapse = document.querySelector("#collapsibleNavbar");
+            
+                navbarToggler.addEventListener("click", function () {
+                    if (navbarCollapse.classList.contains("show")) {
+                        new bootstrap.Collapse(navbarCollapse).hide();
+                    } else {
+                        new bootstrap.Collapse(navbarCollapse).show();
+                    }
+                });
+            
+                var navLinks = document.querySelectorAll(".navbar-nav .nav-link, .dropdown-item");
+                navLinks.forEach(function (link) {
+                    link.addEventListener("click", function () {
+                        if (navbarCollapse.classList.contains("show")) {
+                            new bootstrap.Collapse(navbarCollapse).hide();
+                        }
+                    });
+                });
+            });
+    </script>
+-->
+    <script>
+        $(function () {
+            const warning = $('#Warning')
+            warning.click(function () {
+                console.log('OK');
+                warning.fadeToggle();
+            })
+        });
+
+
+        var settings = {
+            "url": "https://dog.ceo/api/breeds/image/random",
+            "method": "GET",
+            "timeout": 0,
+        };
+
+        $.ajax(settings).done(function (response) {
+            console.log(response);
+            let DogP = (response.message)
+            let randomP = `
+            <img src="${DogP}" class="card-img-top" alt="...">
+            `
+            console.log(randomP);
+            $('#dogPic').before(randomP);
+        });
+        // contact button JS
+        const exampleModal = document.getElementById('exampleModal')
+        exampleModal.addEventListener('show.bs.modal', event => {
+            // Button that triggered the modal
+            const button = event.relatedTarget
+            // Extract info from data-bs-* attributes
+            const recipient = button.getAttribute('data-bs-whatever')
+            // If necessary, you could initiate an AJAX request here
+            // and then do the updating in a callback.
+            //
+            // Update the modal's content.
+            const modalTitle = exampleModal.querySelector('.modal-title')
+            const modalBodyInput = exampleModal.querySelector('.modal-body input')
+
+            modalTitle.textContent = `New message to ${recipient}`
+            modalBodyInput.value = recipient
         })
-    });
+        // chart
+        const ctx = document.getElementById('myChart');
 
+        Chart.defaults.font.size = 18;
+        new Chart(ctx, {
+            type: 'polarArea',
+            data: {
+                color: '#FFF',
+                labels: ['HTML5', 'CSS', 'JS', 'JQ', 'PHP', 'SQL'],
+                datasets: [{
+                    // label: '# of Votes',
+                    data: [8, 7, 6, 5, 6, 4],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
 
-    var settings = {
-        "url": "https://dog.ceo/api/breeds/image/random",
-        "method": "GET",
-        "timeout": 0,
-    };
-
-    $.ajax(settings).done(function (response) {
-        console.log(response);
-        let DogP = (response.message)
-        let randomP = `
-        <img src="${DogP}" class="card-img-top" alt="...">
-        `
-        console.log(randomP);
-        $('#dogPic').before(randomP);
-    });
-    // contact button JS
-    const exampleModal = document.getElementById('exampleModal')
-    exampleModal.addEventListener('show.bs.modal', event => {
-        // Button that triggered the modal
-        const button = event.relatedTarget
-        // Extract info from data-bs-* attributes
-        const recipient = button.getAttribute('data-bs-whatever')
-        // If necessary, you could initiate an AJAX request here
-        // and then do the updating in a callback.
-        //
-        // Update the modal's content.
-        const modalTitle = exampleModal.querySelector('.modal-title')
-        const modalBodyInput = exampleModal.querySelector('.modal-body input')
-
-        modalTitle.textContent = `New message to ${recipient}`
-        modalBodyInput.value = recipient
-    })
-    // chart
-    const ctx = document.getElementById('myChart');
-
-Chart.defaults.font.size = 18;
-new Chart(ctx, {
-  type: 'polarArea',
-  data: {
-    labels: ['HTML5', 'CSS', 'JS', 'JQ', 'PHP', 'SQL'],
-    datasets: [{
-      data: [8, 7, 6, 5, 6, 4],
-      borderWidth: 1
-    }]
-  },
-  options: {
-    responsive: true,
-    maintainAspectRatio: false, // 不強制維持長寬比
-    scales: {
-      y: {
-        beginAtZero: true
-      }
-    }
-  }
-});
-
-</script>
+    </script>
 </body>
+
 </html>
